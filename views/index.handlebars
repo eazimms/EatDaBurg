@@ -1,0 +1,48 @@
+<div class="container col-lg-10">
+  <div class="jumbotron col-lg-12">
+    <form class="create-form">
+      <div class="form-group">
+        <label for="newBurger">Make da burger</label>
+        <br>
+        <input type="text" id="newburger">
+        <button type="submit" class="btn btn-primary">Submit to da burger</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-5">
+    <div class="card" id="onDaMenu">
+      <h5>On da Menu!</h5>
+      <ul>
+        {{#each burgers}}
+          {{#unless devoured}}
+          <span>{{this.id}} - {{this.burger_name}}</span>
+          <button type="button" class="btn btn-success" id="devourbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}">Devour da burger</button>
+          <br>
+          <br>
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  
+
+
+  <div class="col-lg-5">
+    <div class="card" id="offDaMenu">
+      <h5>Off da Menu!</h5>
+      <ul>
+        {{#each burgers}}
+          {{#if devoured}}
+          <span>{{this.id}} - {{this.burger_name}}</span>
+          <button type="button" class="btn btn-danger" id="deleyeet" data-id="{{this.id}}" data-newDevoured="{{devour}}"><strong>Get it off da menu</strong></button>
+          <br>
+          <br>
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
