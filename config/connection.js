@@ -4,11 +4,11 @@ var mysql = require('mysql');
 // Just seeing if this does anything. 
 
 var connection = mysql.createConnection({
-  host: "localhost", 
-  port: 3306, 
-  user: "root", 
-  password: "R0senrot!", 
-  database: "burger_db"
+  host: "us-cdbr-iron-east-05.cleardb.net", 
+  // port: 3306, 
+  user: "b8fdef7d65c25c", 
+  password: "0c5ab308", 
+  database: "heroku_1bc32a1d3cf9d21"
 
 }); 
 
